@@ -1,0 +1,59 @@
+{
+  "shell": {
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_bodies": 1,
+    "volume_mm3": 66473.29,
+    "triangles": 2994,
+    "bounds_mm": [
+      [
+        -41.0,
+        -39.0,
+        0.0
+      ],
+      [
+        41.0,
+        39.0,
+        78.8
+      ]
+    ]
+  },
+  "base": {
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_bodies": 1,
+    "volume_mm3": 26121.65,
+    "triangles": 2844,
+    "bounds_mm": [
+      [
+        -41.0,
+        -39.0,
+        0.0
+      ],
+      [
+        41.0,
+        39.0,
+        49.0
+      ]
+    ]
+  },
+  "assembly_overlap_mm3": 5.329070518200751e-15,
+  "cable_corridor_material_overlap_mm3": {
+    "Pi USB connector and turn": 0.0,
+    "LCD PH2 side lead": 0.0
+  },
+  "cable_corridor_component_overlap_mm3": {
+    "Pi USB connector and turn": 0.0,
+    "LCD PH2 side lead": 0.0
+  },
+  "component_material_overlap_mm3": {
+    "LCD": 0.0,
+    "Pi Zero 2 W": -0.0,
+    "speaker": 0.0,
+    "USB microphone": 0.0,
+    "MAX98357A": 0.0,
+    "QT1010": 0.0,
+    "electrode": 0.0
+  },
+  "component_pair_overlap_mm3": {}
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-cube"
+version = "0.1.0"
+description = "Raspberry Pi Zero 2 W voice companion using OrcaRouter"
+requires-python = ">=3.11"
+dependencies = ["Pillow>=9.4,<13", "numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+pi = ["gpiozero>=2,<3", "spidev>=3.6,<4", "lgpio>=0.2,<1"]
+
+[project.scripts]
+ai-cube = "ai_cube.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["ai_cube*"]

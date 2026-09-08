@@ -1,0 +1,29 @@
+[Unit]
+Description=AI Cube voice companion
+Wants=network-online.target
+After=network-online.target sound.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=ai-cube
+Group=ai-cube
+SupplementaryGroups=audio gpio spi
+WorkingDirectory=/opt/ai-cube
+Environment=GPIOZERO_PIN_FACTORY=lgpio
+Environment=TMPDIR=/tmp
+ExecStart=/opt/ai-cube/.venv/bin/python -m ai_cube --env-file /etc/ai-cube.env
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=10
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+TemporaryFileSystem=/tmp:rw,nosuid,nodev,size=32M,mode=1777
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target
